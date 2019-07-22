@@ -1,0 +1,18 @@
+module.exports = function(controller) {
+  
+  controller.hears(['hola', 'chao'], 'message_received', function(bot, message){
+   bot.reply(message, {
+       text:  'hola que tal, todo bien' , 
+       typingDelay: 3000,
+});    
+});
+  
+ controller.on('hello' , function(bot,message){
+   bot.reply(message, 'Bienvenido como vas');
+   
+ });
+controller.on('welcome_back', function(bot,message){
+  bot.reply(message, 'Que bueno que regreso, gracias');
+});
+
+}
